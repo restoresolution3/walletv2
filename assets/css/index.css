@@ -1,0 +1,315 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    background-color: #000000;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    padding-bottom: 20%;
+    padding-top: 65px;
+    
+}
+
+h2 {
+    color: #B4B4B4;
+    font-size: clamp(20px, 2.5vw, 30px);
+}
+
+.header-div {
+    height: 65px;
+    background-color: #0D0D0D;
+    padding: 0.2rem 3vw;
+    display: flex;
+    align-items: center;
+    top: 0;
+    position: fixed;
+    z-index: 1;
+    width: 100vw;
+    justify-content: center;
+}
+
+.header-div img {
+    width: 45px;
+    margin: 0 2rem;
+}
+
+.header-div span {
+    color: #a1a1a1;
+}
+
+.header-div h2 {
+    color: white;
+    font-size: clamp(20px, 2vw, 26px);
+    font-weight: 400;
+    text-align: left;
+    white-space: nowrap;
+}
+
+/* --------------------------------------------------
+header ends 
+-----------------------------------------------------*/
+
+.restore {
+    /* margin-top: 65px; */
+    background: radial-gradient(30.59% 35.38% at 50.02% 20.13%, #292E35 2.5%, black 100%), url("/assets/images/bg.png");
+    background-size: contain;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-attachment: local;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 11rem;
+    position: relative;
+}
+
+.restore img {
+    width: 500px;
+    min-width: calc(50px + 50%);
+    opacity: 0.5;
+    margin-bottom: 1rem;
+}
+
+.restore .logo {
+    width: 70px;
+    height: 70px;
+    object-fit: contain;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1; /* Ensure the logo is above the background image */
+}
+
+.restore .gradient-button {
+    background: linear-gradient(105.94deg, rgba(137, 171, 211, 0.2) 31.01%, rgba(88, 121, 168, 0.2) 49.43%, rgba(35, 68, 121, 0.2) 68.99%);
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #a9bdd6;
+    border-radius: 40px;
+    font-weight: 500;
+    border: 1.2px solid #3d444d;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    margin-top: 1rem;
+}
+
+.gradient-button:hover {
+    background: linear-gradient(105.94deg, rgba(137, 171, 211, 0.4) 31.01%, rgba(88, 121, 168, 0.4) 49.43%, rgba(35, 68, 121, 0.4) 68.99%);
+}
+
+.restore .decent {
+    max-width: 700px;
+    font-weight: 500;
+    font-size: clamp(30px, 4vw, 45px);
+    text-align: center;
+    color: #B4B4B4;
+    margin: 2rem auto;
+}
+
+.restore .contact {
+    font-size: 20px;
+    padding: 15px 25px;
+    border-radius: 20px;
+    font-weight: 600;
+    margin-bottom: 3rem;
+}
+
+
+
+/* ---------------------------------------------------------
+Youtube section starts
+ -----------------------------------------------------------*/
+
+.video-section {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* min-height: 100vh; */
+    background-color: #000;
+}
+
+.video-container {
+    position: relative;
+    width: clamp(300px, 70%, 800px);
+    background: url('https://img.youtube.com/vi/BGnHrUtzp-w/maxresdefault.jpg') center center / cover no-repeat;
+    aspect-ratio: 16 / 9;
+    cursor: pointer;
+}
+
+.play-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80px;
+    height: 80px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0.8;
+    transition: opacity 0.3s;
+}
+
+.play-button::before {
+    content: '';
+    display: block;
+    width: 0;
+    height: 0;
+    border-left: 20px solid white;
+    border-top: 12px solid transparent;
+    border-bottom: 12px solid transparent;
+}
+
+.play-button:hover {
+    opacity: 1;
+}
+
+video {
+    display: none;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+/* ---------------------------------------------------------
+secret section starts
+ -----------------------------------------------------------*/
+
+.secret-section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.secret-section img {
+    max-width: 100%;
+    height: auto;
+
+}
+
+.secret-section p {
+    color: #c9c9c9;
+    /* max-width:  60%;
+    min-width: 320px; */
+    text-align: center;
+    letter-spacing: 1px;
+    line-height: 25px;
+    margin-top: 2rem;
+
+    padding: 0 16vw;
+}
+
+
+
+
+/* --------------------------------------------------------------
+DIALOG CSS START
+ ----------------------------------------------------------------*/
+.card {
+    position: fixed;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 1.5rem .5rem 4rem .5rem;
+    border: none;
+    border-radius: 10px;
+    background-color: #30282D;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Add a shadow */
+    width: min(400px, calc(50% + 80px));
+    min-width: 330px;
+
+    z-index: 9997;
+
+    /* overflow-x: hidden; */
+
+
+}
+
+.card .line {
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: .5vw;
+
+    z-index: 9998;
+
+    background-color: #6abfca;
+    margin: 0;
+
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.card div {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.card div .social {
+    width: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+}
+
+.card div .social img{
+    width: 100%;
+}
+
+.card div .social p {
+    color: #B4B4B4;
+    font-size: 14px;
+}
+
+
+.close {
+    position: absolute;
+    top: -12px;
+    right: -2px;
+    z-index: 9999;
+    display: inline;
+
+    /* background-color: transparent; */
+    border: none;
+    width: 33px;
+
+
+}
+
+#contact-us {
+    display: none;
+
+}
+
+
+#backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(97, 87, 93, 0.8);
+    display: none;
+    z-index: 100;
+}
+
+
